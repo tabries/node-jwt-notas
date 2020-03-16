@@ -1,0 +1,45 @@
+Resolver el siguiente escenario:
+
+Registro de usuarios
+Cada usuario puede crear grupos y puede dar acceso a otros usuarios a ese grupo.
+Los usuarios pueden estar asociados a N grupos, pero solo pueden tener 1 grupo activo.
+Cada usuario puede subir notas al servicio para un grupo específico.
+Las notas consisten en título y detalle (ambos solo contienen texto).
+
+Manejar la autenticación de usuarios con JWT.
+Manejar el cambio de grupo activo y la autorización para subir notas exclusivamente con JWT.
+
+-------------------------------------------
+
+Post CrearGrupo
+
+Post OtorgarAccesoAGrupo
+
+Post CambiarGrupoActivo
+
+Post SubirNota
+
+//users
+{
+  "username":
+  "email":
+  "password":
+  "grupoactivo":
+}
+
+//grupo
+{
+  "nombregrupo":
+  "admin":
+}
+
+//miembros
+{
+  "username":
+  "nombregrupo":
+}
+
+{
+  "titulo":
+  "cuerpo":
+}
